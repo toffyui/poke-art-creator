@@ -81,11 +81,7 @@ export default {
     API_BASE_URL,
     API_OGP_URL,
   },
-  buildModules: ["@nuxtjs/tailwindcss", "@aceforth/nuxt-optimized-images"],
-  optimizedImages: {
-    optimizeImages: true,
-    optimizeImagesInDev: true,
-  },
+  buildModules: ["@nuxtjs/tailwindcss"],
   /*
    ** Nuxt.js modules
    */
