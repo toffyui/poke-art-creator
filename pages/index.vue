@@ -229,12 +229,6 @@ import Footer from "~/components/Footer.vue";
 import Section from "~/components/Section.vue";
 import Loading from "~/components/Loading.vue";
 export default {
-  asyncData({ app }) {
-    const locale = app.$cookies.get("locale");
-    return {
-      defaultLang: locale,
-    };
-  },
   components: {
     Modal,
     Header,
@@ -279,7 +273,9 @@ export default {
     },
   },
   mounted() {
-    if (this.defaultLang) {
+    const cookieLocale = this.$cookies.get("locale");
+    if (cookieLocale) {
+      this.$i18n.locale = cookieLocale;
       return;
     }
     const userLanguage = navigator.language;

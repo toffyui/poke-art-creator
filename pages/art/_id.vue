@@ -85,13 +85,11 @@
 <script>
 import Footer from "~/components/Footer.vue";
 export default {
-  async asyncData({ params, app }) {
-    const locale = app.$cookies.get("locale");
+  async asyncData({ params }) {
     return {
       url: `https://poke.art-creator.net/art/${params.id}`,
       image: `https://nurie.s3-ap-northeast-1.amazonaws.com/ogpimg/${params.id}.jpg`,
       twitterImage: `https://nurie.s3-ap-northeast-1.amazonaws.com/ogpimg/${params.id}.jpg`,
-      defaultLang: locale,
     };
   },
   components: {
@@ -128,7 +126,9 @@ export default {
     };
   },
   mounted() {
-    if (this.defaultLang) {
+    const cookieLocale = this.$cookies.get("locale");
+    if (cookieLocale) {
+      this.$i18n.locale = cookieLocale;
       return;
     }
     const userLanguage = navigator.language;
