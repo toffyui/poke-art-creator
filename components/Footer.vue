@@ -39,8 +39,8 @@
       class="md:flex md:justify-between container mx-auto py-3 md:py-6 px-5 md:px-20"
     >
       <div class="my-4 text-base leading-tight">
-        <a href="https://twitter.com/yui_active" class="underline textShadow"
-          ><strong>Yui</strong></a
+        <a href="https://twitter.com/toffy_dev" class="underline textShadow"
+          ><strong>Yuiko Koyanagi (Toffy)</strong></a
         >
         All Rights Reserved.
       </div>
