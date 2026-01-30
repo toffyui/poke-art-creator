@@ -57,9 +57,19 @@ export default {
     link: [
       {
         rel: "icon",
-        type: "image/x-icon",
-        href:
-          "https://yuilog.xyz/wp-content/uploads/2021/07/9986fb268ef719be10e46ba059323eb2.jpg",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
+      },
+      {
+        rel: "shortcut icon",
+        href: "/favicon.png",
       },
     ],
   },
